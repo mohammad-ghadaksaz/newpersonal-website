@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solar system by Bardia</title>
+    <style>
+        body {
+    background: #000;
+}
+.rotate {
+    -webkit-transform-origin: 250px 250px;
+    -moz-transform-origin: 250px 250px;
+    -ms-transform-origin: 250px 250px;
+    -o-transform-origin: 250px 250px;
+    transform-origin: 250px 250px;
+    animation: orbit 4s linear infinite;
+}
+circle {
+    fill: none;
+}
+.sun {
+    fill: yellow;
+}
+.neptune {
+    fill: #5f9ea0;
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -o-animation-duration: 7s;
+    animation-duration: 7s;
+}
+.uranus {
+    fill: #3f56ff;
+    -webkit-animation-duration: 9s;
+    -moz-animation-duration: 9s;
+    -o-animation-duration: 9s;
+    animation-duration: 9s;
+}
+.saturn {
+    fill: #f3cfa9;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s;
+}
+.jupiter {
+    fill: #e89054;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    -o-animation-duration: 8s;
+    animation-duration: 8s;
+}
+.mars {
+    fill: #aa180a;
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -o-animation-duration: 7s;
+    animation-duration: 7s;
+}
+.earth {
+    fill: #58aa65;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s;
+}
+.venus {
+    fill: #e66d18;
+    -webkit-animation-duration: 6s;
+    -moz-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s;
+}
+.mergury {
+    fill: #fff;
+    -webkit-animation-duration: 6s;
+    -moz-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+    </style>
+</head>
+<body>
+    <svg width="600" height="600">
+        <circle r="240" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="neptune rotate" r="15" cx="420" cy="78"></circle>
+        <circle r="220" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="uranus rotate" r="10" cx="380" cy="72"></circle>
+        <circle r="200" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="saturn rotate" r="12" cx="320" cy="64"></circle>
+        <circle r="180" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="jupiter rotate" r="20" cx="70" cy="244"></circle>
+        <circle r="160" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="mars rotate" r="8" cx="130" cy="354"></circle>
+        <circle r="140" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="earth rotate" r="6" cx="280" cy="386"></circle>
+        <circle r="120" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="venus rotate" r="5" cx="280" cy="134"></circle>
+        <circle r="90" cx="250" cy="250" stroke="#fff"></circle>
+        <circle class="mergury rotate" r="4" cx="180" cy="194"></circle>
+        <circle class="sun" r="80" cx="250" cy="250"></circle>
+    </svg>
+</body>
+</html>

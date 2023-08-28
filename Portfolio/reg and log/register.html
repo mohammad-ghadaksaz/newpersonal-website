@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register by bardia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center mt-2">Register form</h1>
+            <div class="col-6 border m-3 form">
+                <input type="text" placeholder="Username" class="col-10 m-4 p-3">
+                <input type="email" placeholder="Email address" class="col-10 m-4 p-3">
+                <input type="password" placeholder="password" class="col-10 m-4 p-3">
+                <input type="text" placeholder="Phone number" class="col-10 m-4 p-3">
+                <button id="btn" class="col-5 m-3 p-3 btn-success">Register!</button>
+            </div>
+        </div>
+        <h2 id="msg" class="text-center col-12 text-capitalize"></h2>
+    </div>
+
+
+
+    <script>
+        let mess = document.getElementById('msg')
+        let _inp = document.querySelectorAll('.form input')
+        document.getElementById('btn').addEventListener('click', () => {
+            const data = []
+            _inp.forEach((val) => {
+                if (val.value != '') {
+                    val.style.border = '2px solid green'
+                    data.push(val.value)
+                } else {
+                    val.style.border = '4px solid red'
+                }
+            })
+            console.log(data);
+            if (
+                data.length == _inp.length
+            ) {
+                //send data
+                const newTask = {
+                    username: data[0],
+                    email: data[1],
+                    pass: data[2],
+                    phone: data[3]
+
+                };
+
+                fetch('https://64b8ce0721b9aa6eb07a3ef7.mockapi.io/myApp/v1/sess39/register', {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    // Send your data in the request body as JSON
+                    body: JSON.stringify(newTask)
+                }).then(res => {
+                    if (res.ok) {
+                        return res.json();
+                    }
+                    // handle error
+                }).then(task => {
+                    mess.innerHTML = 'user added succsesfully'
+                    mess.style.color = 'green'
+                    setTimeout(() => {
+                        mess.innerHTML = ''
+                    }, 2000);
+                    _inp.forEach((val) => {
+                        val.value = null
+                    })
+                    _inp[0].focus()
+                    // do something with the new task
+                }).catch(error => {
+                    mess.innerHTML = error
+                    mess.style.color = 'red'
+                    // handle error
+                })
+            } else {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

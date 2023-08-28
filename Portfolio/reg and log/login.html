@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login by bardia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .myFlex{
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-wrap: wrap;
+                border: 2px solid black;
+            }
+            .myFlex>div{
+                flex-basis: 50px;
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 5px ;
+                background-color: rgb(190, 183, 183);
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 19px;
+                text-transform: capitalize;
+            }
+            .myFlex>div:last-child{
+                flex-grow: 7;
+            }
+            .myFlex>div:last-child>img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center mt-2">Login</h1>
+            <div class="col-6 border m-3 form justify-content-center align-items-center" id="list">
+                <input type="email" placeholder="Email address" class="col-10 m-4 p-3" id="email">
+                <input type="password" placeholder="password" class="col-10 m-4 p-3" id="pass">
+                <button id="btn" class="col-5 m-3 p-3 btn-success">Login</button>
+            </div>
+        </div>
+        <h2 id="msg" class="text-center col-12 text-capitalize"></h2>
+    </div>
+
+
+
+
+    <script>
+        const btn = document.getElementById('btn')
+        let _email = document.getElementById('email')
+        let _pass = document.getElementById('pass')
+        btn.addEventListener('click' , ()=>{
+            let flag = 0
+            _email = _email.value
+            _pass = _pass.value
+
+            if(
+                (_email != '') &&
+                (_pass != '')
+            ){
+                fetch('https://64b8ce0721b9aa6eb07a3ef7.mockapi.io/myApp/v1/sess39/register')
+                .then( res => res.json())
+                .then(arrCheck =>{
+                    console.log(arrCheck);
+                    arrCheck.map((val)=>{
+                        if(
+                            (val.email == _email) &&
+                            (val.pass == _pass )
+                        ){
+                            document.getElementById('list').classList.remove('col-6')
+                            document.getElementById('list').classList.add('col-12')
+                            document.getElementById('list').innerHTML= ''
+                            
+                            arrCheck.map(()=>{
+                                let sec = document.createElement('section')
+                                sec.classList.add('myFlex')
+                                sec.innerHTML=`
+                                <div>${val.id}</div>
+                                <div>${val.username}</div>
+                                <div>${val.email}</div>
+                                <div>${val.password}</div>
+                                <div>${val.phone}</div>
+                                <div><img src='${val.image}'></div>
+                                `
+                                document.getElementById('list').append(sec)
+                            })
+                            flag ++
+
+                        }
+
+                    })
+                    if(flag == 0){
+                        alert('User not found , please register first!')
+                        location.assign('register.html')
+                    }
+                })
+                //do sth
+            }else{
+                alert('All Fields Are Required !')
+            }
+        })
+    </script>
+</body>
+
+</html>

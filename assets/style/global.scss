@@ -1,0 +1,795 @@
+html {
+    overflow: hidden;
+}
+
+main {
+    overflow-y: scroll !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 10px !important;
+    background: linear-gradient(to right, #1e1b7a, #281f68) !important;
+    font-family: 'Quicksand', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.main-section{
+    background-color: rgba(13, 13, 41, 0.845);
+}
+
+
+.scrollbar-morpheus-den::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #283b7a;
+    background-color: #171717;
+    border-radius: 10px;
+}
+
+.scrollbar-morpheus-den::-webkit-scrollbar {
+    width: 12px;
+    background-color: #171717;
+}
+
+.scrollbar-morpheus-den::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #283b7a;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#a7b605), to(#0b203f));
+    background-image: -webkit-linear-gradient(bottom, #a7b605 0%, #0b203f 100%);
+    background-image: linear-gradient(to top, #a7b605 0%, #0b203f 100%);
+}
+
+.scrollbar-morpheus-den {
+    scrollbar-color: #191b1e #f5f5f5;
+}
+
+
+
+// <!-- **** Start header **** -->
+.headerNav__bardia {
+    border-bottom: 1px solid rgba(255, 255, 0, 0.692);
+    color: #b4bbc5;
+    width: 100%;
+    transition: 0.1s;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0);
+
+    .nav-link {
+        color: #b4bbc5;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 10px 14px;
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: white !important;
+        }
+
+        .primary_btn {
+            display: inline-block;
+            background: #ee0979;
+            background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+            background: linear-gradient(to right, #0f0a90, #400588) !important;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0 28px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+    }
+
+    .nav-link.active,
+    .navbar-nav .show>.nav-link {
+        color: white !important;
+    }
+
+    .navbar-brand {
+        img {
+            margin-left: 30px;
+            width: 150px;
+            height: 80px;
+            filter: contrast(110%);
+            border-radius: 50%;
+            outline: 2px solid rgba(255, 162, 0, 0.837);
+            @media screen and (max-width:950px) {
+                scale: .7;
+            }
+        }
+    }
+
+    //  navbar toggle  collapse
+    .navbar-toggler {
+        color: #6a67cea9;
+    }
+}
+
+
+// <!-- **** End header **** -->
+
+
+
+
+
+
+// <!-- **** Start about bardia**** -->
+.about__bardia {
+    margin: 80px auto;
+
+    .aboutTxt__bardia {
+        color: #c4cfde;
+        font-weight: 700;
+
+        h1 {
+
+            span {
+                color: #eeff00;
+                font-weight: 900;
+                position: relative;
+
+                &::after{
+                    width: 0;
+                    height: 3px;
+                    background-color: orange;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -7px;
+                    animation: afterborder 5s ease-in-out infinite .4s;
+                    // @media screen and (max-width:800px) {
+                    //     display: none;
+                    // }
+                }
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            line-height: 2;
+        }
+
+        strong {
+            color: white
+        }
+
+        .aboutMe2 {
+            // border-top: 2px solid rgba(255, 255, 255, 0.459);
+            // border-right: 2px solid rgba(255, 255, 255, 0.459);
+            border-radius: 20px;
+            padding: 10px;
+            overflow:hidden ;
+            h4{
+                border-bottom: 1px solid rgba(255, 255, 255, 0.742);
+                border-radius: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 6px;
+            }
+            ul {
+                li {
+
+                    span,
+                    a {
+                        width: fit-content;
+                        padding: 3px;
+                        background-color: #4947477f;
+                        border-radius: 10px;
+                        color: white;
+                        &:hover {
+                            color: #09a9ee !important;
+                            cursor: pointer;
+                            background-color: #49474700;
+
+                        }
+                    }
+
+                    i {
+                        margin-right: 10px;
+                        font-size: 18px;
+                        color: rgba(229, 255, 0, 0.816);
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #ee8f09d4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo-skill {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .aboutImg__bardia {
+        height: max-content;
+        z-index: 2;
+        opacity: .8;
+        background: linear-gradient(to right, #0e0a9069, #582f8b58) !important;
+        // box-shadow: 0px 0px 13px 3px rgba(255, 255, 255, 0.622);
+        // outline: 2px solid yellow;
+    }
+
+
+    .brderotm {
+        margin-top: 150px;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+}
+
+// <!-- **** End about bardia **** -->
+
+
+
+
+// Start style social box icon
+.box-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: 1s;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-3px) rotateZ(360deg);
+        scale: 1.05;
+
+    }
+}
+
+.social {
+    &:nth-of-type(1) {
+        &:hover {
+            color: #0A66C2;
+        }
+    }
+
+    &:nth-of-type(2) {
+        &:hover {
+
+            i {
+                color: transparent;
+                background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+        }
+    }
+
+    &:nth-of-type(3) {
+        &:hover {
+            color: #0088cc;
+        }
+    }
+    &:nth-of-type(4){
+        &:hover{
+            color: orange;
+        }
+    }
+
+}
+
+// End style social box icon
+
+
+
+// <!-- **** Start Portfolio bardia **** -->
+
+.portfolio__bardia {
+    border-bottom: 2px solid black ;
+    h3{
+        text-transform: uppercase;
+    }
+    p{
+        color: #0A66C2 !important;
+    }
+    .portfolio__cards {
+        img {
+            transition: .5s;
+            box-shadow: 0px 0px 2px 2px white;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(.9);
+
+            }
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #c4cfde;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            i {
+                opacity: 0;
+                transition: .4s;
+            }
+
+            &:hover {
+                i {
+                    opacity: 1;
+                    margin-left: 5px;
+                }
+
+                color: #2a58e2;
+
+            }
+        }
+
+        text-align: left;
+        padding: 30px;
+        position: relative;
+        border-radius: 20px;
+        background: linear-gradient(145deg, #03225f, #500902f2);
+        box-shadow: 10px 10px 19px #1c1e22,
+        -10px -10px 19px #262a2e;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        outline: 2px solid rgba(0, 204, 255, 0.527);
+        transition: 0.5s all ease-in-out;
+        display: inline-block;
+        text-transform: uppercase;
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            transition: .4s;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right bottom, #04142a, #2f3501);
+            opacity: 0;
+            z-index: -1;
+
+
+
+        }
+
+        .info-portfolio {
+            font-size: 12px;
+
+            .info-portfolio__sec1 {
+                color: #e4eb0f;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .info-portfolio__sec2 {
+                font-size: 15px;
+
+                i {
+                    margin-right: 5px;
+
+
+                }
+            }
+
+
+
+        }
+    }
+
+
+
+
+}
+
+
+// <!-- **** End Portfolio bardia **** -->
+
+
+
+
+.skills__bardia {
+    border-bottom:2px solid black ;
+    margin: 100px auto;
+    h3{
+        text-transform: uppercase;
+    }
+
+    .skill__cards {
+        flex-basis: 28.33%;
+        border-radius: 50%;
+        margin: 0 15px 30px;
+        transition: .4s;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            scale: 1.092;
+            transform: rotateZ(10deg);
+        }
+        &::after{
+            width: 70%;
+            height: 100%;
+            transform: rotateX(-80deg) perspective(800px);
+            content: '';
+            background-color: inherit;
+            position: absolute;
+            left: 15%;
+            bottom: -88px;
+            border-radius: 50%;
+            transition: .4s !important;
+            box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.581);
+            z-index: -1;
+        }
+
+        >.skillInner__cards {
+            padding: 40px;
+            background: #091a34a0;
+            margin: 3px 3px 0;
+            text-align: center;
+            border-radius: 50%;
+            transition: .4s;
+            &:hover{
+                background: #202328;
+
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 42px;
+                color: #fff;
+            }
+
+        }
+    }
+
+    section {
+        &:nth-of-type(1) {
+            background: linear-gradient(180deg, rgba(255, 196, 0, 0.6), rgba(31, 30, 28, .6) 67.59%);
+            color: #ffd500;
+            
+        }
+
+        &:nth-of-type(2) {
+            background: linear-gradient(180deg, rgba(0, 169, 255, .6), rgba(31, 30, 28, .6) 67.59%);
+            color: #00a7ef;
+            
+        }
+
+        &:nth-of-type(3) {
+            background: linear-gradient(180deg, rgba(221, 88, 79, .6), rgba(31, 30, 28, .6) 67.59%);
+            color: #dd584f;
+            
+        }
+
+        &:nth-of-type(4) {
+            background: linear-gradient(180deg, rgba(158, 0, 255, .6), rgba(31, 30, 28, .6) 67.59%);
+            color: #ad00ff;
+            
+        }
+
+        &:nth-of-type(5) {
+            background: linear-gradient(180deg, rgba(0, 169, 255, .6), rgba(31, 30, 28, .6) 67.59%);
+            color: #00a9ff;
+            
+        }
+
+        &:nth-of-type(6) {
+            background: linear-gradient(180deg, rgba(158, 0, 255, .6), rgba(31, 30, 28, .6) 67.59%);
+            color: #ad00ff;
+            
+        }
+        &:nth-of-type(7) {
+            background: linear-gradient(180deg, rgba(255, 247, 0, 0.6), rgba(31, 30, 28, .6) 67.59%);
+            color: #ffe100;
+            
+        }
+        &:nth-of-type(8) {
+            background: linear-gradient(180deg, #00fff29b, rgba(31, 30, 28, .6) 67.59%);
+            color: #00fff2;
+            
+        }
+
+    }
+}
+
+
+
+
+
+.header-section {
+    p {
+        color: #0178ff;
+        font-size: 18px;
+        font-weight: 900 !important;
+
+    }
+
+    h3 {
+        font-weight: 700;
+        color: #c4cfde;
+    }
+}
+
+
+
+// <!-- **** Start Contact bardia **** -->
+.contact__bardia {
+    color: #878e99;
+
+h3{
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+    .formContact__bardia {
+
+
+        .formContact-Box {
+            box-shadow: 10px 10px 19px #024959, -10px -10px 19px #b9ca04c3;
+            border-radius: 10px;
+            background-color: #11111121;
+        }
+
+        .formContact-L {
+            font-size: 18px;
+
+            figure {
+                overflow: hidden;
+                padding: 0 !important;
+                margin: 0 !important;
+                border-radius: 10px;
+                margin-bottom: 25px !important;
+
+                img {
+                    transition: .7s;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+
+                    }
+                }
+            }
+
+            .info-contact {
+                h1 {
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    margin: 20px 0;
+                    color: rgb(234, 234, 234) !important;
+                    font-size: 26px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        width: 80%;
+                        height: 2px;
+                        background-color: rgba(255, 68, 0, 0.652);
+                        position: absolute;
+                        left: 5%;bottom: -5px;
+                    }
+                }
+                h2{
+                    color: yellow;
+                    text-shadow: 2px 2px 5px black;
+                }
+
+                p {
+                    margin: 20px 0;
+                    color: rgb(255, 255, 255);
+
+                    a {
+                        transition: .4s;
+                        color: #bfff00 !important;
+                        font-weight: 400;
+
+                        &:hover {
+                            color: #09a9ee !important;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .formContact-R {
+            h1{
+                color: yellow;
+            }
+            label {
+                font-size: 12px;
+                color: #ffe600;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                text-align: left;
+                display: block;
+            }
+
+            input {
+                background-color: #295393b9;
+                border-radius: 6px;
+                transition: .4s;
+                border: 2px solid #f7ff07d3;
+
+                font-size: 14px;
+                color: #c4cfde;
+                box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+                letter-spacing: 1px;
+
+                &:focus {
+                    background-color: #191b1e;
+                    color: #E4E6EA;
+                    border-color: #0178ff;
+                    box-shadow: none;
+                }
+                &::placeholder{
+                    color: white;
+
+                }
+                
+            }
+
+            textarea {
+                &::placeholder{
+                    color: white;
+
+                }
+                width: 100%;
+                min-height: 235px;
+                background-color: #051e44b9;
+                border-radius: 6px;
+                padding: 0;
+                transition: .4s;
+                border: 2px solid #f7ff07d3;
+                padding: 10px 15px;
+                font-size: 14px;
+                line-height: 18px;
+                color: #c4cfde;
+                box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+                letter-spacing: 1px;
+                resize: none;
+
+                &:focus {
+                    background-color: #191b1e;
+                    color: #E4E6EA;
+                    border-color: #0178ff;
+                    box-shadow: none;
+                }
+            }
+
+
+
+            button {
+                margin-top: 20px;
+                width: 100%;
+                border-radius: 6px;
+                background: linear-gradient(145deg, #1e2024, #0d2338);
+                box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #2c2e26;
+                ;
+                transition: .4s;
+                text-transform: uppercase;
+                z-index: 2;
+                font-size: 14px;
+                font-weight: 500;
+                border: 0 none;
+                display: inline-block;
+                padding: 15px 35px;
+                list-style: none;
+                text-decoration: none;
+                color: #fffb01;
+                font-weight: 700;
+                @media screen and (max-width:992px) {
+                    scale: .7;       
+                    font-size: 17px;
+                    box-shadow: 0 0 15px 2px white;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    font-weight: 1200 !important;
+                }
+            }
+        }
+
+    }
+
+}
+
+// <!-- **** End Contact bardia **** -->
+
+
+
+
+
+footer {
+    .end-footer {
+        transition: .4s;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        background-color: rgba(0, 0, 0, 0.025);
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-10px);
+            color: #09a9ee !important;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    }
+}
+
+
+
+.toTop {
+    opacity: 0;
+    transition: 0.6s;
+    position: fixed;
+    right: 4% !important;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right bottom, #212428, #16181c);
+    font-size: 25px;
+    z-index: 1000000;
+    outline: .5px solid rgba(255, 255, 255, 0.586);
+    &:hover {
+        box-shadow: 0 0 10px 1px white;
+    }
+}
+
+
+
+@keyframes afterborder {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    60%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
